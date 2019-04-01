@@ -66,3 +66,14 @@ def test_win_diagonal_down_right_and_up_left():
         [e, e, e, e, e, e, e],
     ]
     assert find_winning_column(board, Y) == 3
+
+def test_win_diagonal_down_right_and_up_left_end_of_sequence():
+    board = [
+        [R, Y, R, R, Y, Y, R],
+        [e, Y, Y, R, R, e, e],
+        [e, e, R, Y, Y, e, e],
+        [e, e, Y, e, e, e, e],
+        [e, e, e, e, e, e, e],
+        [e, e, e, e, e, e, e],
+    ]
+    assert find_winning_column(board, Y) == 4
