@@ -1,5 +1,6 @@
 from wins import find_winning_column
-from moves import is_column_full, other_player
+from moves import other_player
+from board import is_column_full
 from dimensions import BOARD_COLUMN_COUNT, BOARD_ROW_COUNT
 from random import shuffle
 from players import RED, YELLOW
