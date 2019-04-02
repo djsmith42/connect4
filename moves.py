@@ -1,6 +1,7 @@
 from dimensions import BOARD_ROW_COUNT
 from players import EMPTY
 from copy import deepcopy
+from exceptions import InvalidMove
 
 def make_board_with_move(board, player, column):
     row = find_landing_row(board, column)

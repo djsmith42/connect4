@@ -77,3 +77,14 @@ def test_win_diagonal_down_right_and_up_left_end_of_sequence():
         [e, e, e, e, e, e, e],
     ]
     assert find_winning_column(board, Y) == 4
+
+def test_win_vertical_column_already_maxed_out():
+    board = [
+        [R, Y, R, R, Y, Y, R],
+        [e, Y, Y, R, R, e, e],
+        [e, e, R, Y, Y, e, e],
+        [e, e, Y, e, Y, e, e],
+        [e, e, Y, e, Y, e, e],
+        [e, e, Y, e, e, e, e],
+    ]
+    assert find_winning_column(board, Y) == 4
