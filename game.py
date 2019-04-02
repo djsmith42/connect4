@@ -17,8 +17,7 @@ while True:
     column = perfect_defender.next_move(board, player)
     assert column is not None
     board, row = make_board_with_move(board, player, column)
-    print('{} chooses column {} to land at row {}'.format(pretty_player_name(player), column, row))
-    print_board('After turn {}:'.format(turn), board)
+    print_board('\n{} chooses column {} to land at row {}:'.format(pretty_player_name(player), column, row), board)
 
     if is_winning_board(board, player, row, column):
         print('Game over, {} wins after {} turns'.format(pretty_player_name(player), turn))
