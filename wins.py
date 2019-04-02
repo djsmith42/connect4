@@ -1,6 +1,6 @@
 from dimensions import BOARD_ROW_COUNT, BOARD_COLUMN_COUNT
 from players import RED, YELLOW
-from exceptions import InvalidMove
+from errors import InvalidMove
 from moves import make_board_with_move
 from board import print_board
 
@@ -28,7 +28,7 @@ def travel(board, player, start_row, start_column, up=None, down=None, left=None
 
     count = 0
     row, column = move(start_row, start_column, up=up, down=down, left=left, right=right)
-    while row >= 0 and row < BOARD_ROW_COUNT and column >= 0 and column <= BOARD_COLUMN_COUNT:
+    while row >= 0 and row < BOARD_ROW_COUNT and column >= 0 and column < BOARD_COLUMN_COUNT:
         if board[row][column] == player:
             count += 1
         else:
